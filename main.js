@@ -128,18 +128,22 @@ const story = () =>{
     const storyDiv = document.createElement('div');
     storyDiv.id = "story";
 
-    const item1 = document.createElement('div');
+    const story_title = document.createElement('h2');
+    story_title.textContent = "Story";
+    storyDiv.appendChild(story_title);
 
-    const item1_title = document.createElement('h3');
-    item1_title.textContent = "Korean Fried Chicken";
-    item1.appendChild(item1_title);
+    const story_desc = document.createElement('p');
+    story_desc.textContent = "You are a puppet created by Geppetto who’s caught in a web of lies with unimaginable monsters and untrustworthy figures standing between you and the events that have befallen the world of Lies of P.";
+    storyDiv.appendChild(story_desc);
 
-    const item1_desc = document.createElement('p');
-    item1_desc.textContent = "This crispiest chicken with a sweet and spicy sauce that will blow your mind";
-    item1.appendChild(item1_desc);
+    const story_desc2 = document.createElement('p');
+    story_desc2.textContent = "You are awakened by a mysterious voice that guides you through the plagued city of Krat - a once lively place that has been poisoned by madness and bloodlust.";
+    storyDiv.appendChild(story_desc2);
 
-    storyDiv.appendChild(item1);
-
+    const story_desc3 = document.createElement('p');
+    story_desc3.textContent = "In our soulslike, you must adapt yourself and  your weapons to face untold horrors, untangle the unfathomable secrets of the city's elites and choose whether to confront predicaments with the truth or weave lies to overcome them on the journey to find yourself.";
+    storyDiv.appendChild(story_desc3);
+    
     content.appendChild(storyDiv);
 }
 
@@ -153,24 +157,112 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _slides__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+
+
 const gallery = () =>{
     const content = document.querySelector('#content');
 
     const galleryDiv = document.createElement('div');
     galleryDiv.id = "gallery";
 
-    const address = document.createElement('h2');
-    address.textContent = "1234 Easy St.";
-    galleryDiv.appendChild(address);
+    const img1 = document.createElement('img');
+    img1.src = "../dist/images/gallery1.png"
+    img1.id = "slide";
+    img1.classList.add("slides");
 
-    const phone_number = document.createElement('h2');
-    phone_number.textContent = '(555)-555-5555';
-    galleryDiv.appendChild(phone_number);
+    galleryDiv.appendChild(img1);
+
+    const img2 = document.createElement('img');
+    img2.src = "../dist/images/gallery2.png"
+    img2.id = "slide";
+    img2.classList.add("slides");
+
+    galleryDiv.appendChild(img2);
+
+    const img3 = document.createElement('img');
+    img3.src = "../dist/images/gallery3.png"
+    img3.id = "slide";
+    img3.classList.add("slides");
+
+    galleryDiv.appendChild(img3);
+
+    const img4 = document.createElement('img');
+    img4.src = "../dist/images/gallery4.png"
+    img4.id = "slide";
+    img4.classList.add("slides");
+
+    galleryDiv.appendChild(img4);
+
+    const img5 = document.createElement('img');
+    img5.src = "../dist/images/gallery5.png"
+    img5.id = "slide";
+    img5.classList.add("slides");
+
+    galleryDiv.appendChild(img5);
+
+    const buttonDiv = document.createElement('div');
+    buttonDiv.id = "button_div";
+
+    const leftButton = document.createElement('button');
+    leftButton.id = "left_button";
+    leftButton.textContent = "<";
+    leftButton.addEventListener('click', ()=>{
+        (0,_slides__WEBPACK_IMPORTED_MODULE_0__.showSlides)((0,_slides__WEBPACK_IMPORTED_MODULE_0__.getSlideIndex)() - 1);
+    });
+
+    buttonDiv.appendChild(leftButton);
+
+    const rightButton = document.createElement('button');
+    rightButton.id = "right_button";
+    rightButton.textContent  = ">";
+    rightButton.addEventListener('click', ()=> {
+        (0,_slides__WEBPACK_IMPORTED_MODULE_0__.showSlides)((0,_slides__WEBPACK_IMPORTED_MODULE_0__.getSlideIndex)() + 1)
+    });
+
+    buttonDiv.appendChild(rightButton);
+
+    galleryDiv.appendChild(buttonDiv);
 
     content.appendChild(galleryDiv);
+
+    (0,_slides__WEBPACK_IMPORTED_MODULE_0__.showSlides)(0);
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gallery);
+
+/***/ }),
+/* 7 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getSlideIndex: () => (/* binding */ getSlideIndex),
+/* harmony export */   showSlides: () => (/* binding */ showSlides)
+/* harmony export */ });
+let slideIndex = 1;
+
+const getSlideIndex = () => {
+    return slideIndex;
+}
+
+const setSlideIndex = (n) => {
+    slideIndex = n;
+}
+
+const showSlides = (n) => {
+    setSlideIndex(n);
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    if (n >= slides.length) {setSlideIndex(0)}
+    if (n < 0) {setSlideIndex(slides.length-1)}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[getSlideIndex()].style.display = "block";
+}
+
+
 
 /***/ })
 /******/ 	]);

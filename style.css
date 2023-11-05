@@ -44,4 +44,28 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+}
+
+#gallery img {
+    width: 600px;
+    height: 400px;
+}
+
+#button_div {
+    display: flex;
+
+}
+
+#left_button, #right_button {
+    border: 1px solid #e8e8e8;
+    color: #e8e8e8;
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+}
+
+#left_button:hover, #right_button:hover {
+    border: 2px solid white;
 }
