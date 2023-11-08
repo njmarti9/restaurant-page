@@ -1,9 +1,11 @@
+// import logo from "./dist/images/logo.png";
+
 const header = () => {
     const headerDiv = document.createElement('div');
     headerDiv.id = "header";
 
     let restImage = document.createElement('img');
-    restImage.src = "../dist/images/logo.png";
+    restImage.src = "./dist/images/logo.png";
     restImage.id = "logo";
 
     const homeButton = document.createElement('button');

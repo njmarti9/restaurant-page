@@ -1,7 +1,9 @@
+// import mainArt from "../dist/images/mainArt.jpg";
+
 const home = () => {
     const content = document.querySelector('#content');
 
-    document.body.style.backgroundImage = "url('../dist/images/lies_of_p_main_art.jpg')";
+    document.body.style.backgroundImage = "url(./dist/images/mainArt.jpg)";
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundColor = "black";
