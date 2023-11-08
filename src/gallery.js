@@ -63,42 +63,42 @@ const gallery = () =>{
     galleryDiv.appendChild(img8);
 
     const img9 = document.createElement('img');
-    img9.src = "./dist/images/gallery5.png"
+    img9.src = "./dist/images/gallery9.png"
     img9.id = "slide";
     img9.classList.add("slides");
 
     galleryDiv.appendChild(img9);
 
     const img10 = document.createElement('img');
-    img10.src = "./dist/images/gallery5.png"
+    img10.src = "./dist/images/gallery10.png"
     img10.id = "slide";
     img10.classList.add("slides");
 
     galleryDiv.appendChild(img10);
 
     const img11 = document.createElement('img');
-    img11.src = "./dist/images/gallery5.png"
+    img11.src = "./dist/images/gallery11.png"
     img11.id = "slide";
     img11.classList.add("slides");
 
     galleryDiv.appendChild(img11);
 
     const img12 = document.createElement('img');
-    img12.src = "./dist/images/gallery5.png"
+    img12.src = "./dist/images/gallery12.png"
     img12.id = "slide";
     img12.classList.add("slides");
 
     galleryDiv.appendChild(img12);
 
     const img13 = document.createElement('img');
-    img13.src = "./dist/images/gallery5.png"
+    img13.src = "./dist/images/gallery13.png"
     img13.id = "slide";
     img13.classList.add("slides");
 
     galleryDiv.appendChild(img13);
 
     const img14 = document.createElement('img');
-    img14.src = "./dist/images/gallery5.png"
+    img14.src = "./dist/images/gallery14.png"
     img14.id = "slide";
     img14.classList.add("slides");
 
